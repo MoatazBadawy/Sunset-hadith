@@ -14,9 +14,9 @@ import com.moataz.afternoonhadeeth.R
 import com.moataz.afternoonhadeeth.data.Hadith
 import com.moataz.afternoonhadeeth.notification.NotificationAfternoon
 
-
 class MainActivity : AppCompatActivity() {
 
+    // views
     private lateinit var hadithButton: Button
     private lateinit var firstHadithText: TextView
     private lateinit var secondHadithText: TextView
@@ -64,20 +64,24 @@ class MainActivity : AppCompatActivity() {
         supportButton.setOnClickListener { }
     }
 
+    private fun setupHadithText() {
+        firstHadithText = findViewById(R.id.first_hadith)
+        firstHadithText.text = Hadith().firstHadith()
+        // To scroll the text
+        firstHadithText.movementMethod = ScrollingMovementMethod()
+
+        secondHadithText = findViewById(R.id.second_hadith)
+        secondHadithText.text = Hadith().secondHadith()
+        // To scroll the text
+        secondHadithText.movementMethod = ScrollingMovementMethod()
+    }
+
+    /**
+     * setOnClick on button to get Hadith
+     */
     private fun getHadith() {
         hadithButton = findViewById(R.id.get_hadith_button)
         hadithButton.setOnClickListener { setupHadithText() }
-    }
-
-    private fun setupHadithText() {
-        // first element in the view
-        firstHadithText = findViewById(R.id.first_hadith)
-        firstHadithText.text = Hadith().firstHadith()
-        firstHadithText.movementMethod = ScrollingMovementMethod()
-        // second element in the view
-        secondHadithText = findViewById(R.id.second_hadith)
-        secondHadithText.text = Hadith().secondHadith()
-        secondHadithText.movementMethod = ScrollingMovementMethod()
     }
 
     private fun setupNotification() {
