@@ -4,7 +4,7 @@ import android.view.View
 import android.view.Window
 import androidx.core.view.ViewCompat
 
-class Views {
+object ViewHelper {
 
     fun intiViews(window: Window) {
         // make the status bar white with black icons

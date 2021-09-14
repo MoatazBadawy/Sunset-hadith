@@ -2,17 +2,14 @@ package com.moataz.afternoonhadeeth.ui
 
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
 import com.moataz.afternoonhadeeth.data.Hadith
 import com.moataz.afternoonhadeeth.databinding.ActivityMainBinding
 import com.moataz.afternoonhadeeth.notification.NotificationAfternoon
-import com.moataz.afternoonhadeeth.utils.Intents
-import com.moataz.afternoonhadeeth.utils.Views
+import com.moataz.afternoonhadeeth.utils.IntentHelpers
+import com.moataz.afternoonhadeeth.utils.ViewHelper
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        Views().intiViews(window)
-        NotificationAfternoon().setupAfternoonNotification(this)
+        ViewHelper.intiViews(window)
+        NotificationAfternoon.setupAfternoonNotification(this)
         setOnClickToolbarIcons()
         setupHadithText()
         getHadith()
@@ -29,11 +26,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setOnClickToolbarIcons() {
         binding.twitter.setOnClickListener {
-            Intents().openTwitterAccountIntent(this)
+            IntentHelpers.openTwitterAccountIntent(this)
         }
 
         binding.instagram.setOnClickListener {
-            Intents().openInstagramAccountIntent(this)
+            IntentHelpers.openInstagramAccountIntent(this)
         }
 
         binding.support.setOnClickListener {
