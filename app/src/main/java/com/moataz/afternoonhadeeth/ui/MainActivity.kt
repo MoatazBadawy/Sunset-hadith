@@ -2,7 +2,9 @@ package com.moataz.afternoonhadeeth.ui
 
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
 import com.moataz.afternoonhadeeth.data.Hadith
 import com.moataz.afternoonhadeeth.databinding.ActivityMainBinding
 import com.moataz.afternoonhadeeth.notification.NotificationAfternoon
@@ -18,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        Views().intiViews()
+        Views().intiViews(window)
         NotificationAfternoon().setupAfternoonNotification(this)
         setOnClickToolbarIcons()
         setupHadithText()
@@ -27,11 +29,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setOnClickToolbarIcons() {
         binding.twitter.setOnClickListener {
-            Intents().openTwitterAccountIntent()
+            Intents().openTwitterAccountIntent(this)
         }
 
         binding.instagram.setOnClickListener {
-            Intents().openInstagramAccountIntent()
+            Intents().openInstagramAccountIntent(this)
         }
 
         binding.support.setOnClickListener {
@@ -47,9 +49,6 @@ class MainActivity : AppCompatActivity() {
         binding.secondHadith.movementMethod = ScrollingMovementMethod()
     }
 
-    /**
-     * setOnClick on button to get Hadith
-     */
     private fun getHadith() {
         binding.getHadithButton.setOnClickListener { setupHadithText() }
     }
