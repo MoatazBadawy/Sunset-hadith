@@ -4,7 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 
-class Intents() : Intent() {
+class Intents : Intent() {
 
     fun openTwitterAccountIntent(view: AppCompatActivity) {
         val openTwitterAccount =
