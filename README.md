@@ -9,4 +9,4 @@ This is a simple app for Android that display Hadiths.
 
 ## Contributing
 
-If you'd like to contribute, please take a look at the [PRs Welcome](https://github.com/MoatazBadawy/Sunssset_hadith/issues?q=is%3Aissue+is%3Aopen+label%3A%22PRs+Welcome%22) label on the issue tracker. For new features, please open an issue to discuss it before beginning implementation.
+If you'd like to contribute, please take a look at the [PRs Welcome](https://github.com/MoatazBadawy/Sunset-hadith/labels) label on the issue tracker. For new features, please open an issue to discuss it before beginning implementation.
