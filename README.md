@@ -1,4 +1,4 @@
-<h1 align="center">حديث الغروب - أحاديث صحيحة</h1>
+<h1 align="center">Sunset Hadith</h1>
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
@@ -8,7 +8,7 @@
 </p>
 
 ![](https://i.ibb.co/983fBnp/Cover.png)
-# Sunset Hadith
+# Overview
 This is a simple app for Android that display Hadiths.
 
 * most of Hadiths got from internet and paper books.
