@@ -1,4 +1,4 @@
-package com.moataz.afternoonhadeeth.data
+package com.moataz.afternoonhadeeth.data.model
 
 class Hadith {
 

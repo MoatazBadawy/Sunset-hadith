@@ -9,7 +9,7 @@ import android.graphics.Color
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import com.moataz.afternoonhadeeth.R
-import com.moataz.afternoonhadeeth.data.Hadith
+import com.moataz.afternoonhadeeth.data.model.Hadith
 import com.moataz.afternoonhadeeth.ui.MainActivity
 import java.util.*
 
