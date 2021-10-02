@@ -3,7 +3,7 @@ package com.moataz.afternoonhadeeth.ui
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import androidx.appcompat.app.AppCompatActivity
-import com.moataz.afternoonhadeeth.data.Hadith
+import com.moataz.afternoonhadeeth.data.model.Hadith
 import com.moataz.afternoonhadeeth.databinding.ActivityMainBinding
 import com.moataz.afternoonhadeeth.notification.NotificationAfternoon
 import com.moataz.afternoonhadeeth.utils.IntentHelpers
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         ViewHelper.intiViews(window)
-        NotificationAfternoon.setupAfternoonNotification(this)
+        NotificationAfternoon().setupAfternoonNotification(this)
         setOnClickToolbarIcons()
         setupHadithText()
         getHadith()
