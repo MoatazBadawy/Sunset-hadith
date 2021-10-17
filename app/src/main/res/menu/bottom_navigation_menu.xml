@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_item"
+        android:icon="@drawable/selector_home"
+        android:title="@string/menu_home" />
+
+    <item
+        android:id="@+id/search_item"
+        android:icon="@drawable/selector_video"
+        android:title="@string/menu_search" />
+
+    <item
+        android:id="@+id/videos_item"
+        android:icon="@drawable/selector_ebadat"
+        android:title="@string/menu_videos" />
+
+    <item
+        android:id="@+id/saved_item"
+        android:icon="@drawable/selector_image"
+        android:title="@string/menu_saved" />
+
+    <item
+        android:id="@+id/premium_item"
+        android:icon="@drawable/selector_premium"
+        android:title="@string/menu_premium" />
+
+</menu>

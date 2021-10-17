@@ -1,10 +1,10 @@
-package com.moataz.afternoonhadeeth.utils
+package com.moataz.afternoonhadeeth.utils.helper
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 
-object IntentHelpers {
+object Intents {
 
     fun openTwitterAccountIntent(view: AppCompatActivity) {
         val openTwitterAccount =

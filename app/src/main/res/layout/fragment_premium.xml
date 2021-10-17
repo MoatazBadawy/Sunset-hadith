@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    android:gravity="center"
+    tools:context=".ui.view.fragment.PremiumFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/top_hasanat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            android:text="خير الناس أنفعهم للناس"
+            android:textColor="#2f3137"
+            android:textSize="@dimen/_22sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_kanz_hasanat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            android:text="كن من خيار الناس وشاركنا الأجر"
+            android:textColor="#2f3137"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/text_kanz_hasanatع"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            android:text="قم بنشر التطبيق بين جميع أصدقائك"
+            android:textColor="#2f3137"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/text_kanz_hasيanatع"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            android:text="وشارك أحاديث النبي صلى الله عليه وسلم"
+            android:textColor="#2f3137"
+            android:textSize="@dimen/_16sdp" />
+
+        <Button
+            android:id="@+id/get_hadith_bhgutton"
+            android:layout_width="@dimen/_205sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:background="@drawable/rounder_speak_button"
+            android:text="شارك التطبيق"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <Button
+            android:id="@+id/get_hahdyhith_bgutton"
+            android:layout_width="@dimen/_205sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@drawable/rounder_speak_button"
+            android:text="تابعنا على الفيسبوك"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <Button
+            android:id="@+id/get_hadihth_bgutton"
+            android:layout_width="@dimen/_205sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@drawable/rounder_speak_button"
+            android:text="إنضم عبر التليجرام"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

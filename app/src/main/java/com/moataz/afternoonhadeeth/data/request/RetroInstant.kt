@@ -8,7 +8,7 @@ import retrofit2.create
 
 object RetroInstant {
 
-    private const val BASE_URL = ""
+    private const val BASE_URL = "https://moatazbadawy.github.io/DataHadith/"
     private var retrofit: Retrofit? = null
 
     fun getRetroInstance(): APIService {

@@ -6,10 +6,9 @@ import com.moataz.afternoonhadeeth.data.request.RetroInstant
 import io.reactivex.Single
 
 class Repository {
-
     private val service: APIService = RetroInstant.getRetroInstance()
 
-    fun executeHomePageApi(): Single<HomeResponse?>? {
+    fun executeHomeApi(): Single<HomeResponse> {
         return service.getObjectsList()
     }
 }

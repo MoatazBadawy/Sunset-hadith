@@ -1,10 +1,10 @@
-package com.moataz.afternoonhadeeth.utils
+package com.moataz.afternoonhadeeth.utils.helper
 
 import android.view.View
 import android.view.Window
 import androidx.core.view.ViewCompat
 
-object ViewHelper {
+object Views {
 
     fun intiViews(window: Window) {
         // make the status bar white with black icons

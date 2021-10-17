@@ -5,6 +5,6 @@ import io.reactivex.Single
 import retrofit2.http.GET
 
 interface APIService {
-    @GET("")
-    fun getObjectsList(): Single<HomeResponse?>?
+    @GET("homepagedata.json")
+    fun getObjectsList(): Single<HomeResponse>
 }

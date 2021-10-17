@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/app_widget_description"
+    android:initialKeyguardLayout="@layout/zekr_widget"
+    android:initialLayout="@layout/zekr_widget"
+    android:minWidth="250dp"
+    android:minHeight="40dp"
+    android:resizeMode="horizontal"
+    android:updatePeriodMillis="21600000"
+    android:widgetCategory="home_screen" />
