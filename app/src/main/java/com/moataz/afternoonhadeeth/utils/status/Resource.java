@@ -3,10 +3,6 @@ package com.moataz.afternoonhadeeth.utils.status;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.moataz.afternoonhadeeth.data.model.HomeResponse;
-
-import java.util.List;
-
 public class Resource<T> {
 
     @NonNull

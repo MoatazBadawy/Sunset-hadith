@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +38,8 @@
             android:gravity="center"
             android:text="كن من خيار الناس وشاركنا الأجر"
             android:textColor="#2f3137"
-            android:textSize="@dimen/_16sdp" />
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/text_kanz_hasanatع"
@@ -49,7 +50,8 @@
             android:gravity="center"
             android:text="قم بنشر التطبيق بين جميع أصدقائك"
             android:textColor="#2f3137"
-            android:textSize="@dimen/_16sdp" />
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/text_kanz_hasيanatع"
@@ -61,7 +63,8 @@
             android:gravity="center"
             android:text="وشارك أحاديث النبي صلى الله عليه وسلم"
             android:textColor="#2f3137"
-            android:textSize="@dimen/_16sdp" />
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="italic" />
 
         <Button
             android:id="@+id/get_hadith_bhgutton"

@@ -2,6 +2,7 @@ package com.moataz.afternoonhadeeth.utils.helper
 
 import android.view.View
 import android.view.Window
+import android.view.WindowManager
 import androidx.core.view.ViewCompat
 
 object Views {
@@ -12,5 +13,10 @@ object Views {
         // make the app support only arabic "Right to left"
         // even if the language of the device on english or others
         ViewCompat.setLayoutDirection(window.decorView, ViewCompat.LAYOUT_DIRECTION_RTL)
+    }
+
+    fun hideStatusBar(window: Window) {
+        // Hide status bar
+        window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
     }
 }

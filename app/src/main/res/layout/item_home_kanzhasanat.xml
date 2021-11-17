@@ -7,10 +7,11 @@
 
         <variable
             name="kanzHasanatModel"
-            type="com.moataz.afternoonhadeeth.data.model.KanzHasanat" />
+            type="com.moataz.afternoonhadeeth.data.model.home.KanzHasanat" />
     </data>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/tets"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_6sdp"
@@ -46,27 +47,25 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="@dimen/_12sdp"
                 android:layout_marginTop="10dp"
                 android:elevation="@dimen/_7sdp"
                 android:shadowColor="#E1FF0000"
                 android:text="كنز الحسنات"
                 android:textColor="#000000"
                 android:textSize="@dimen/_16ssp"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginStart="16dp"
-                android:contentDescription="@string/circle_kanz"
-                android:elevation="@dimen/_7sdp"
-                android:shadowColor="#E1FF0000"
-                android:src="@drawable/black_icon"
+            <Button
+                android:id="@+id/button_share_other_images"
+                android:layout_width="@dimen/_19sdp"
+                android:layout_height="@dimen/_19sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@drawable/copy"
                 app:layout_constraintBottom_toBottomOf="@+id/textView"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView" />
 
             <View

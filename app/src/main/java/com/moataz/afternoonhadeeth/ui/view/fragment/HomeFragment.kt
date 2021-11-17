@@ -1,7 +1,10 @@
 package com.moataz.afternoonhadeeth.ui.view.fragment
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,12 +12,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.moataz.afternoonhadeeth.data.model.HomeResponse
+import com.moataz.afternoonhadeeth.data.model.home.HomeResponse
 import com.moataz.afternoonhadeeth.databinding.FragmentHomeBinding
 import com.moataz.afternoonhadeeth.ui.adapter.HomeAdapter
 import com.moataz.afternoonhadeeth.ui.viewmodel.HomeViewModel
-import com.moataz.afternoonhadeeth.utils.IOnBackPressed
 import com.moataz.afternoonhadeeth.utils.helper.Intents.openInstagramAccountIntent
+import com.moataz.afternoonhadeeth.utils.interfaces.IOnBackPressed
 import com.moataz.afternoonhadeeth.utils.status.Resource
 import com.moataz.afternoonhadeeth.utils.status.Status
 
@@ -34,7 +37,6 @@ class HomeFragment : Fragment(), IOnBackPressed {
         initializeAdapter()
         initializeViewModel()
         getTopList()
-        onSwipeRefresh()
         return binding.root
     }
 
@@ -73,27 +75,6 @@ class HomeFragment : Fragment(), IOnBackPressed {
                 }
             }
         )
-    }
-
-    private fun onSwipeRefresh() {
-        binding.swipeToRefresh.setOnRefreshListener {
-            viewModel.makeApiCallHome().observe(requireActivity(),
-                { response: Resource<HomeResponse> ->
-                    when (response.status) {
-                        Status.ERROR -> {
-                            binding.swipeToRefresh.isRefreshing = false
-                        }
-                        Status.LOADING -> {
-                            binding.progressBar.visibility = View.VISIBLE
-                        }
-                        Status.SUCCESS -> {
-                            binding.swipeToRefresh.isRefreshing = false
-                            adapter.setHomeList(response.data)
-                        }
-                    }
-                }
-            )
-        }
     }
 
     private fun initializeViewModel() {

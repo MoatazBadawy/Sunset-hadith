@@ -5,7 +5,7 @@
     <data>
         <variable
             name="dailyImageModel"
-            type="com.moataz.afternoonhadeeth.data.model.DailyImage" />
+            type="com.moataz.afternoonhadeeth.data.model.home.DailyImage" />
     </data>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

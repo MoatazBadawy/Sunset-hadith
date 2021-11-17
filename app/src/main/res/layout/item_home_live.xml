@@ -6,7 +6,7 @@
 
         <variable
             name="liveModel"
-            type="com.moataz.afternoonhadeeth.data.model.Live" />
+            type="com.moataz.afternoonhadeeth.data.model.home.Live" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -40,27 +40,30 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="@dimen/_12sdp"
                 android:layout_marginTop="10dp"
                 android:elevation="@dimen/_7sdp"
                 android:text="البث المباشر"
                 android:textColor="#E1FF0000"
                 android:textSize="@dimen/_16ssp"
                 app:layout_constraintBottom_toTopOf="@+id/live_image"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginStart="16dp"
-                android:contentDescription="@string/circle_live"
-                android:elevation="@dimen/_7sdp"
-                android:src="@drawable/live_icon"
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/ic_live_pulse" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </layout>
