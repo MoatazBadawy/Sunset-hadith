@@ -6,6 +6,9 @@ import io.reactivex.Single
 import retrofit2.http.GET
 
 interface APIService {
-    @GET("homepagedata.json")
+    @GET("a58c790af5723a42493c")
     fun getHomeList(): Single<HomeResponse>
+
+    @GET("8eff9e2d29547d671b88")
+    fun getImagesList(): Single <List<Images>>
 }

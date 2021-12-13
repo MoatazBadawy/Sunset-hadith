@@ -29,11 +29,11 @@
 
             <Button
                 android:id="@+id/instagram"
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
                 android:layout_gravity="left"
                 android:layout_marginLeft="@dimen/_16sdp"
-                android:background="@drawable/instagram" />
+                android:background="@drawable/test" />
 
             <TextView
                 android:id="@+id/app_title"

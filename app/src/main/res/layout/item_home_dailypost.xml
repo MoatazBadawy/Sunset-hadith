@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="dailyPostModel"
             type="com.moataz.afternoonhadeeth.data.model.home.DailyPost" />
     </data>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,17 +47,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <TextView
                 android:id="@+id/button_share_other_images"
-                android:layout_width="21dp"
-                android:layout_height="21dp"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/ic_share_black"
+                android:text="مشاركة"
+                android:textColor="#5476aa"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView" />
-
 
             <View
                 android:id="@+id/shape"

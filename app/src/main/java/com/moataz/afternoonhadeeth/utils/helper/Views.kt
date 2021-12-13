@@ -16,7 +16,6 @@ object Views {
     }
 
     fun hideStatusBar(window: Window) {
-        // Hide status bar
         window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
     }
 }

@@ -3,10 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="firstImageModel"
             type="com.moataz.afternoonhadeeth.data.model.home.FirstImage" />
     </data>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,8 +28,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:elevation="@dimen/_7sdp"
-                app:imageUrl="@{firstImageModel.imageUrl}"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                app:imageUrl="@{firstImageModel.imageUrl}" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

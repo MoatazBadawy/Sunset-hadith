@@ -34,6 +34,8 @@ import com.moataz.afternoonhadeeth.databinding.ItemHomeLiveBinding;
 import com.moataz.afternoonhadeeth.databinding.ItemHomeSaheehbukhariBinding;
 import com.moataz.afternoonhadeeth.databinding.ItemHomeSaheehmuslimBinding;
 import com.moataz.afternoonhadeeth.databinding.ItemHomeTahzeebmuslimBinding;
+import com.moataz.afternoonhadeeth.ui.view.activity.DisplayImageActivity;
+import com.moataz.afternoonhadeeth.ui.view.activity.YoutubePlayerActivity;
 import com.moataz.afternoonhadeeth.utils.helper.TextAction;
 
 import java.util.Objects;
@@ -159,6 +161,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         } else if (getItemViewType(position) == R.id.daily_image) {
             DailyImage dailyImage = items.getDailyImage().get(position - (items.getFirstImage().size() + items.getLive().size() + items.getDailyPost().size() + items.getKanzHasanat().size() + items.getTahzeebMuslim().size()));
             ((DailyImageViewHolder) holder).itemHomeDailyimageBinding.setDailyImageModel(dailyImage);
+            ((DailyImageViewHolder) holder).setOnClick(dailyImage);
 
         } else if (getItemViewType(position) == R.id.text_saheeh_bukhari) {
             SaheehBukhari saheehBukhari = items.getSaheehBukhari().get(position - (items.getFirstImage().size() + items.getLive().size() + items.getDailyPost().size() + items.getKanzHasanat().size() + items.getTahzeebMuslim().size() + items.getDailyImage().size()));
@@ -235,9 +238,9 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         void setOnClick(Live live) {
             itemView.setOnClickListener(v -> {
-                // Add your code here to open Youtube activity .
-                // NOTE: You should add youtube library into your project lib file.
-                // check out youtube documentation for more info.
+                Intent intent = new Intent(itemView.getContext(), YoutubePlayerActivity.class);
+                intent.putExtra("url", live.getUrl());
+                itemView.getContext().startActivity(intent);
             });
         }
     }
@@ -323,6 +326,14 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         DailyImageViewHolder(@NonNull ItemHomeDailyimageBinding itemView) {
             super(itemView.getRoot());
             itemHomeDailyimageBinding = itemView;
+        }
+
+        void setOnClick(DailyImage images) {
+            itemView.setOnClickListener(v -> {
+                Intent intent = new Intent(itemView.getContext(), DisplayImageActivity.class);
+                intent.putExtra("imageUrl", images.getImageUrl());
+                itemView.getContext().startActivity(intent);
+            });
         }
     }
 

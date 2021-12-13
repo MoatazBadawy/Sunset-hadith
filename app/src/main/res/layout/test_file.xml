@@ -17,7 +17,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_210sdp"
+        android:layout_height="@dimen/_195sdp"
         android:background="#FFF1DA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_18sdp"
         android:fontFamily="@font/aref"
         android:text="شارك التطبيق"
         android:textColor="#000000"
@@ -39,20 +39,17 @@
     <TextView
         android:id="@+id/top_text"
         android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_35sdp"
         android:elevation="@dimen/_2sdp"
         android:fontFamily="@font/almarai_bold"
         android:text="خير الناس .. أنفعهم للناس"
         android:textColor="@color/bnv_tab_item_foreground"
         android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <TextView
         android:id="@+id/details_text_one"
@@ -89,34 +86,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_3sdp"
-        android:layout_marginBottom="4dp"
         android:elevation="@dimen/_2sdp"
         android:fontFamily="@font/almarai_bold"
         android:text="وشارك أحاديث وسيرة النبي صلى الله عليه وسلم"
         android:textColor="@color/bnv_tab_item_foreground"
         android:textSize="@dimen/_13ssp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_text_two"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/details_text_two" />
 
     <Button
         android:id="@+id/share_app_button"
         android:layout_width="307dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="@dimen/_24sdp"
         android:background="@drawable/rounder_speak_button"
         android:elevation="@dimen/_20sdp"
         android:text="نسخ الرابط للمشاركة"
-        android:textColor="@color/bnv_tab_item_foreground"
+        android:textColor="@color/white"
         android:textSize="@dimen/_13ssp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_text_three" />
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <Button
         android:id="@+id/follow_us_on_facebook_button"
@@ -127,7 +121,7 @@
         android:background="@drawable/rounder_speak_button"
         android:elevation="@dimen/_2sdp"
         android:text="تابعنا على الفيسبوك"
-        android:textColor="@color/bnv_tab_item_foreground"
+        android:textColor="@color/white"
         android:textSize="@dimen/_13ssp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,7 +137,7 @@
         android:background="@drawable/rounder_speak_button"
         android:elevation="@dimen/_2sdp"
         android:text="إنضم عبر التليجرام"
-        android:textColor="@color/bnv_tab_item_foreground"
+        android:textColor="@color/white"
         android:textSize="@dimen/_13ssp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,16 +150,53 @@
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/rounder_speak_button"
         android:elevation="@dimen/_2sdp"
         android:text="تابعنا على تويتر"
-        android:textColor="@color/bnv_tab_item_foreground"
+        android:textColor="@color/white"
         android:textSize="@dimen/_13ssp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/join_us_in_telegram_button"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/join_us_in_telegram_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+           xmlns:tools="http://schemas.android.com/tools"
+           xmlns:app="http://schemas.android.com/apk/res-auto"
+           style="@style/Widget.AfterNoonHadeeth.AppWidget.Container"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@drawable/rounded_widget"
+           android:layoutDirection="rtl"
+           android:gravity="center"
+           android:theme="@style/Theme.AfterNoonHadeeth.AppWidgetContainer">
+
+           <TextView
+               android:id="@+id/appwidget_text"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/textView"
+               android:layout_centerHorizontal="true"
+               android:layout_marginStart="@dimen/_6sdp"
+               android:layout_marginTop="@dimen/_4sdp"
+               android:layout_marginEnd="@dimen/_6sdp"
+               android:layout_marginBottom="@dimen/_8sdp"
+               android:gravity="center"
+               android:text="سبحان الله وبحمده سبحان الله العظيم"
+               android:textColor="@color/black"
+               android:textSize="@dimen/_16ssp"
+               android:textStyle="bold" />
+
+           <TextView
+               android:id="@+id/textView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:layout_marginStart="@dimen/_4sdp"
+               android:text="ذكر اليوم :"
+               android:textColor="@color/black"
+               android:textSize="@dimen/_14ssp"
+               android:textStyle="bold"
+               app:layout_constraintTop_toTopOf="parent" />
+       </RelativeLayout> -->

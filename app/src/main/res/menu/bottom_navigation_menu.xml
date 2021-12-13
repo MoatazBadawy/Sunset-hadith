@@ -7,16 +7,6 @@
         android:title="@string/menu_home" />
 
     <item
-        android:id="@+id/search_item"
-        android:icon="@drawable/selector_video"
-        android:title="@string/menu_search" />
-
-    <item
-        android:id="@+id/videos_item"
-        android:icon="@drawable/selector_ebadat"
-        android:title="@string/menu_videos" />
-
-    <item
         android:id="@+id/saved_item"
         android:icon="@drawable/selector_image"
         android:title="@string/menu_saved" />

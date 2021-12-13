@@ -12,4 +12,8 @@ class Repository {
     fun executeHomeApi(): Single<HomeResponse> {
         return service.getHomeList()
     }
+
+    fun executeImagesApi(): Single<List<Images>> {
+        return service.getImagesList()
+    }
 }

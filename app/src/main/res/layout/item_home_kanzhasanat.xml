@@ -57,13 +57,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <TextView
                 android:id="@+id/button_share_other_images"
-                android:layout_width="@dimen/_19sdp"
-                android:layout_height="@dimen/_19sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="@dimen/_12sdp"
-                android:background="@drawable/copy"
+                android:layout_marginEnd="16dp"
+                android:text="مشاركة"
+                android:textColor="#5476aa"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView" />

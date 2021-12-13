@@ -6,6 +6,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -20,6 +23,7 @@
 
         <activity
             android:name=".ui.view.activity.MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true" >
 
             <intent-filter>
@@ -28,11 +32,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.view.activity.YoutubePlayerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.view.activity.DisplayImageActivity"
+            android:screenOrientation="portrait" />
 
-        <receiver android:name=".ui.widget.notification.NotificationAfternoon" />
+        <receiver android:name=".ui.jetpack.notification.NotificationAfternoon" />
 
         <receiver
-            android:name=".ui.widget.widget.ZekrWidget"
+            android:name=".ui.jetpack.widget.ZekrWidget"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -54,4 +65,11 @@
                 android:resource="@xml/zekr_widget_info" />
         </receiver>
     </application>
+
+    <!-- This will make the Youtube player work on Android 11+ -->
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
 </manifest>

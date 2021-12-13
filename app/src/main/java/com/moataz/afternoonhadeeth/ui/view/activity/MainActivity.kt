@@ -1,19 +1,16 @@
 package com.moataz.afternoonhadeeth.ui.view.activity
 
-import android.Manifest
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import com.moataz.afternoonhadeeth.R
 import com.moataz.afternoonhadeeth.databinding.ActivityMainBinding
-import com.moataz.afternoonhadeeth.ui.widget.notification.NotificationAfternoon
+import com.moataz.afternoonhadeeth.ui.jetpack.notification.NotificationAfternoon
 import com.moataz.afternoonhadeeth.ui.view.fragment.*
 import com.moataz.afternoonhadeeth.utils.interfaces.IOnBackPressed
 import com.moataz.afternoonhadeeth.utils.helper.Views
@@ -21,8 +18,6 @@ import com.moataz.afternoonhadeeth.utils.helper.Views
 class MainActivity : AppCompatActivity() {
 
     private val homeFragment: Fragment = HomeFragment()
-    private val searchFragment: Fragment = SearchFragment()
-    private val hadithFragment: Fragment = HadithFragment()
     private val imageFragment: Fragment = ImagesFragment()
     private val premiumFragment: Fragment = PremiumFragment()
     private var mainFragment = homeFragment
@@ -51,10 +46,8 @@ class MainActivity : AppCompatActivity() {
     private fun initializeBottomNavigation() {
         // first one transaction to add each Fragment
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.add(R.id.fragment_layout, premiumFragment, "5").hide(premiumFragment)
-        fragmentTransaction.add(R.id.fragment_layout, imageFragment, "4").hide(imageFragment)
-        fragmentTransaction.add(R.id.fragment_layout, hadithFragment, "3").hide(hadithFragment)
-        fragmentTransaction.add(R.id.fragment_layout, searchFragment, "2").hide(searchFragment)
+        fragmentTransaction.add(R.id.fragment_layout, premiumFragment, "3").hide(premiumFragment)
+        fragmentTransaction.add(R.id.fragment_layout, imageFragment, "2").hide(imageFragment)
         fragmentTransaction.add(R.id.fragment_layout, homeFragment, "1")
         // commit once! to finish the transaction
         fragmentTransaction.commit()
@@ -70,16 +63,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.home_item -> {
                     localFragmentTransaction.hide(mainFragment).show(homeFragment).commit()
                     mainFragment = homeFragment
-                    return@setOnItemSelectedListener true
-                }
-                R.id.search_item -> {
-                    localFragmentTransaction.hide(mainFragment).show(searchFragment).commit()
-                    mainFragment = searchFragment
-                    return@setOnItemSelectedListener true
-                }
-                R.id.videos_item -> {
-                    localFragmentTransaction.hide(mainFragment).show(hadithFragment).commit()
-                    mainFragment = hadithFragment
                     return@setOnItemSelectedListener true
                 }
                 R.id.saved_item -> {

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">حديث الغروب</string>
-    <string name="play_console_license">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkfkKFf1McC23mL2Qb4Cu8Qywtbg4yZ0E6golgO/7IR5CM8Tb/pNv7jpZZ/hUAB7wiTBfWtM/TmwnFi2Z8VB4SqT59Ok89ML0hZ5+X2RkgH4P686zjyadKu+ydGMLj4CUZz9e4hOJK8j99SYrRLEvNmuvcKlkmiBp21gUnZLvWyXRwo3Pms+xGxS2EKAcwH196lMdWTMfZoDWq/f/tqlpnv8L41lu450d/Ox9JY8O4Lwpu5qHe3cJNyX7YNU1VTkBxvbbUJNlI08kud391EBBkVBaDU25RaZZG5FF+m+0X6nduv74SbWKUyrpvbBh3BLD0KBPEG7oGYEbyJFYVq6F2QIDAQAB</string>
+    <string name="play_console_license">ADD YOUR LICENSE HERE</string>
     <string name="premium">support_app</string>
 
     <!--bottomNavigation-->
@@ -9,8 +9,6 @@
     <string name="menu_videos">أحاديث</string>
     <string name="menu_saved">صور</string>
     <string name="menu_premium">شارك</string>
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="circle_live">دائرة بجانب البث المباشر</string>
     <string name="circle_post">دائرة بجانب منشور اليوم</string>

@@ -3,10 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="dailyImageModel"
             type="com.moataz.afternoonhadeeth.data.model.home.DailyImage" />
     </data>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,31 +34,32 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="@dimen/_12sdp"
                 android:layout_marginTop="10dp"
                 android:elevation="@dimen/_7sdp"
                 android:shadowColor="#E1FF0000"
                 android:text="حديث اليوم"
                 android:textColor="#000000"
                 android:textSize="@dimen/_16ssp"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginStart="16dp"
-                android:elevation="@dimen/_7sdp"
-                android:shadowColor="#E1FF0000"
-                android:src="@drawable/black_icon"
+            <TextView
+                android:id="@+id/button_share_other_images"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="16dp"
+                android:text="مشاركة"
+                android:textColor="#5476aa"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textView"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
