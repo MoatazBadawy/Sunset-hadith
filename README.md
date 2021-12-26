@@ -7,7 +7,7 @@
   <img alt="MVVM" src="https://img.shields.io/badge/MVVM-Architecture-orange"/>
 </p>
 
-![](https://i.ibb.co/983fBnp/Cover.png)
+![](https://i.ibb.co/TWTxvCb/Cover.png)
 # Overview
 This is a simple app for Android that display Hadiths.
 
