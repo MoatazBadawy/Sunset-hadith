@@ -9,7 +9,8 @@
 </p>
 
 # Overview
-This is a simple app for Android that display Hadiths.
+App url [Get it from gogle play](https://github.com/MoatazBadawy/Sunset-hadith).
+This is a public repo fro the app, If you want to check out our real app private repo plz open an Issues with your email and I will add you.
 
 * most of Hadiths got from internet and paper books.
 * more than 49 hadith.
