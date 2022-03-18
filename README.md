@@ -9,7 +9,7 @@
 </p>
 
 # Overview
-App url [Get it from gogle play](https://github.com/MoatazBadawy/Sunset-hadith).
+App url [Get it from gogle play](https://play.google.com/store/apps/details?id=com.moataz.afternoonhadeeth&hl=ar&gl=US).
 This is a public repo fro the app, If you want to check out our real app private repo plz open an Issues with your email and I will add you.
 
 * most of Hadiths got from internet and paper books.
